@@ -28,7 +28,7 @@ Typical required jobs in an Angular app pipeline:
   - Sonar scan (PR trigger)
   - Create artifact (develop or main trigger)
   - Sonar scan develop (develop trigger)
-  - Deploy to k8s/AWS? (Concourse or Harness deploy?)
+  - Deploy (develop or main trigger)
 
 Typical required jobs in an Angular library pipeline:
   - NPM audit (PR trigger)
@@ -45,22 +45,22 @@ Typical required jobs in a Node.js microservice pipeline:
   - Unit test (PR trigger)
   - Prod build (PR trigger)
   - Sonar scan (PR trigger)
-  - Create docker image with twistlock scan (develop or main trigger)
-  - Deploy to k8s/AWS?
+  - Create docker image with [security tool] scan (develop or main trigger)
   - Sonar scan develop (develop trigger)
+  - Deploy (develop or main trigger)
 
 Typical required jobs in a Spring Boot microservice pipeline:
   - Build and unit test (mvn clean package) (PR trigger)
   - Sonar scan (PR trigger)
-  - Create docker image with twistlock scan (develop or main trigger)
-  - Deploy to k8s/AWS?
+  - Create docker image with [security tool] scan (develop or main trigger)
   - Sonar scan develop (develop trigger)
+  - Deploy (develop or main trigger)
 
 Typical required jobs in an Apigee proxy pipeline:
   - Unit tests (main trigger)
   - Create KVM artifact (main trigger)
-  - Deploy KVM to Apigee?
+  - Deploy KVM to Apigee (if not triggering a different deploy tool)
   - Create proxy artifact (main trigger)
-  - Deploy proxy to Apigee?
+  - Deploy proxy to Apigee (if not triggering a different deploy tool)
   - (Optional) Create Docker image for acceptance tests (test)
   - (Optional) Create Docker image for acceptance tests (stage)
