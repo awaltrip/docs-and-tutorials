@@ -21,7 +21,7 @@ _Replace this text with a summary / list of the changes you're making in this PR
 
 **Before opening a PR, check that you have completed all the following:**
 
-* [ ] Incremented the app version number appropriately, or I did not make changes requiring a version change.
+* [ ] Incremented the app version number appropriately, or N/A.
       <details>
         <summary>
           <i>How to increment version numbers</i>
@@ -31,11 +31,11 @@ _Replace this text with a summary / list of the changes you're making in this PR
           <li>Bug fixes or small changes that don't add a new feature should increment the last (PATCH) version number (e.g. 0.0.1).</li>
         </ul>
       </details>
-* [ ] Manually tested my changes in [a browser | postman | etc], or I did not make changes requiring manual testing.
-* [ ] Manually tested my changes for responsiveness (mobile, tablet, changing screen size), or I did not make changes requiring browser testing.
-* [ ] Added unit tests for all my code changes, or I did not make changes requiring unit tests.
-* Tests should not throw `spec '...' has no expectations` warnings except in rare cases.
-* [ ] Updated the Postman collection if I added a request or changed any request requirements, or does not apply.
+* [ ] Manually tested my changes in { a browser | postman | etc }, or N/A.
+* [ ] Manually tested my changes for responsiveness (mobile, tablet, changing screen size), or N/A.
+* [ ] Added unit tests for all my code changes, or N/A.
+  * Tests should not throw `spec '...' has no expectations` warnings except in rare cases.
+* [ ] Updated the Postman collection if I added a request or changed any request requirements, or N/A.
       <details>
         <summary>
           <i>How to update the Postman collection</i>
@@ -47,8 +47,8 @@ _Replace this text with a summary / list of the changes you're making in this PR
         </ul>
       </details>
 * [ ] Removed any commented out code, console logs, focused tests, etc.
-* [ ] Ran aXe extension in the browser, or I did not make changes requiring accessibility testing.
-* [ ] Checked my changes against our [accessibility standards], or I did not make changes requiring accessibility testing.
+* [ ] Ran aXe extension in the browser, or N/A.
+* [ ] Checked my changes against our { accessibility standards (link) }, or N/A.
 * [ ] Ran CI check locally and made sure it passed. CI check includes:
   * Install
   * Build
