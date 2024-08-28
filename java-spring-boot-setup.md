@@ -11,26 +11,40 @@
 
 ## Pre-reqs
 
-**Maven** - https://maven.apache.org/install.html
-1. Go to the Link above, click downloads in the top right corner, download “Binary Zip Archive” for version 3.8.x
-2. Unzip to `C:\devl\java`
-3. Set MVN_HOME environment variable to folder (EX: `C:\devl\java\apache-maven-3.8.6-bin\apache-maven-3.8.6`)
-4. Add `%MVN_HOME%\bin` to PATH variable.
-5. Open MVN_HOME\conf and change settings.xml to the one listed at ___
+### **Maven** - https://maven.apache.org/install.html
+1. Go to the Link above, click downloads in the top right corner, download “Binary Zip Archive” for version 3.9.x
 
-**JDK** - https://www.oracle.com/java/technologies/downloads/
+Windows:
+
+2. Unzip to `C:\devl\java`
+3. Windows: Set MVN_HOME environment variable to folder (EX: `C:\devl\java\apache-maven-3.9.9-bin\apache-maven-3.9.9`)
+4. Add `%MVN_HOME%\bin` to PATH variable.
+
+Mac:
+
+2. Unzip to `/Users/{userName}`
+3. Edit .zshrc file in your user home directory. If you don't have it, create the file:
+    - `touch ~/.zshrc`
+    - Add contents to the .zshrc file:
+      ```
+      export M2_HOME="/Users/{userName}/apache-maven-3.9.9" (Put your own maven path)
+      PATH="${M2_HOME}/bin:${PATH}"
+      export PATH
+      ```
+
+### **JDK** - https://www.oracle.com/java/technologies/downloads/
 
 1. Download & run the latest Java JDK for Windows (x64 MSI Installer)
 2. Set JAVA_HOME environment variable to new install folder (EX: `C:\Program Files\Java\jdk-19`)
 3. Add `%JAVA_HOME%\bin` to PATH variable
 
-**VS Code Extensions**
+### **VS Code Extensions**
 
 1. Spring Boot Extension Pack
 2. Extension Pack for Java
 3. SonarLint
 
-**SSL Certs**
+### **SSL Certs**
 
 [Install internal certs into JDK]
 
