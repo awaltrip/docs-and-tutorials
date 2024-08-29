@@ -3,27 +3,27 @@
 ## Contents
 
 1. Pre-reqs
-2. [Demo greenfield app](#demo-greenfield-app)
-3. [Build, Run, and Debug](#building-running-and-debugging)
+2. [Demo Greenfield App](#demo-greenfield-app)
+3. [Build, Run, and Debug](#build-run-and-debug)
 4. [Best Practices](#best-practices)
 5. [Hot Reload Support](#hot-reload-support)
-6. [Solutions to Possible Error Scenarios](#Solutions-to-Possible-Error-Scenarios)
+6. [Solutions to Possible Error Scenarios](#solutions-to-possible-error-scenarios)
 
 ## Pre-reqs
 
 ### **Maven** - https://maven.apache.org/install.html
-1. Go to the Link above, click downloads in the top right corner, download “Binary Zip Archive” for version 3.9.x
+Go to the Link above, click downloads in the top right corner, download “Binary Zip Archive” for version 3.9.x
 
 Windows:
 
-2. Unzip to `C:\devl\java`
-3. Windows: Set MVN_HOME environment variable to folder (EX: `C:\devl\java\apache-maven-3.9.9-bin\apache-maven-3.9.9`)
-4. Add `%MVN_HOME%\bin` to PATH variable.
+1. Unzip to `C:\devl`
+2. Set MVN_HOME environment variable to folder (EX: `C:\devl\apache-maven-3.9.9-bin\apache-maven-3.9.9`)
+3. Add `%MVN_HOME%\bin` to PATH variable.
 
 Mac:
 
-2. Unzip to `/Users/{userName}`
-3. Edit .zshrc file in your user home directory. If you don't have it, create the file:
+1. Unzip to `/Users/{userName}`
+2. Edit .zshrc file in your user home directory. If you don't have it, create the file:
     - `touch ~/.zshrc`
     - Add contents to the .zshrc file:
       ```
@@ -32,11 +32,33 @@ Mac:
       export PATH
       ```
 
-### **JDK** - https://www.oracle.com/java/technologies/downloads/
+### **JDK**
 
-1. Download & run the latest Java JDK for Windows (x64 MSI Installer)
-2. Set JAVA_HOME environment variable to new install folder (EX: `C:\Program Files\Java\jdk-19`)
+**Option 1:** 
+
+- Install [SDKMAN](https://sdkman.io/install) cli tool to install and manage multiple versions of the JDK.
+
+- Note: If you need an older version of the JDK that isn't available for automatic install through SDKMAN, you can install the JDK manually and then link it to the SDKMAN cli - [instructions here](https://sdkman.io/usage#install-local-versions).
+
+**Option 2: Manual install - https://www.oracle.com/java/technologies/downloads/**
+
+Windows:
+
+1. Download & run the latest LTS Java JDK installer for Windows (x64 MSI Installer)
+    - If using SDKMAN, skip next steps and [see instructions](https://sdkman.io/usage#install-local-versions).
+2. Set JAVA_HOME environment variable to new install folder (EX: `C:\Program Files\Java\jdk-21`)
 3. Add `%JAVA_HOME%\bin` to PATH variable
+
+Mac:
+
+1. Download & run the latest LTS Java JDK installer for Mac (ARM64 for M1/M2/M3 processor, x64 for Intel processor)
+    - If using SDKMAN, skip next step and [see instructions](https://sdkman.io/usage#install-local-versions).
+3. Edit .zshrc file in your user home directory:
+      ```
+      JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-21.0.4.jdk/Contents/Home" (Put your own jdk path)
+      PATH="${JAVA_HOME}/bin:${PATH}"
+      export PATH
+      ```
 
 ### **VS Code Extensions**
 
@@ -46,9 +68,9 @@ Mac:
 
 ### **SSL Certs**
 
-[Install internal certs into JDK]
+[instructions to install internal certs into JDK]
 
-## Demo greenfield app
+## Demo Greenfield App
 
 https://spring.io/guides/gs/rest-service/
 
